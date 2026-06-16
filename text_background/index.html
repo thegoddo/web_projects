@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <title>Text Background</title>
+  </head>
+  <body>
+    <section>
+      <p class="text"></p>
+    </section>
+    <script>
+      let paragraph = document.querySelector(".text");
+      let text = "The Goddo's GitHub repository".repeat(300);
+      paragraph.textContent = text;
+      paragraph.innerHTML = paragraph.textContent.replace(
+        /\S/g,
+        "<span>$&</span>",
+      );
+    </script>
+  </body>
+</html>
